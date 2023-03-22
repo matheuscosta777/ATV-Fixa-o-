@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+
+<script>
+
+    var objetos = ('Cadeira', 'Impressora', 'Garfo')
+
+
+
+    function inserindoValores(valor){
+
+    var novoObjeto = document.getElementById('resultado').value
+
+      if (valor === 'adiciona') {
+
+          if(novoObjeto === ''){
+            alert('Informe um valor válido')
+          } else{
+            if (objetos.indexOf(novoObjeto === 'Cadeira', 'Impressora', 'Garfo' )) {
+            alert('Objeto já foi adicionado')
+            } else {
+              objetos.push(novoObjeto);
+              console.log(objetos);
+              document.getElementById('resultado').value
+            }
+          }
+
+      } else if (valor === 'ordena'){
+        objetos.sort()
+        console.log(objetos)
+      }
+
+    }
+
+
+  </script>
+
+  </head>
+
+
+
+      <input type="text" name="desafio" placeholder="Cadeira" id="resultado">
+
+
+       <button type="submit" onclick="inserindoValores('adiciona')">Adicionar</button>
+       <button type="submit" onclick="inserindoValores('ordena')">Ordenar</button>
+
+
+</body>   
+
+    
+</html>
